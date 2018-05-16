@@ -28,6 +28,11 @@ public class MyGalleryView extends ViewGroup {
     private int process = 0;
     private ImageView iv_one, iv_two, iv_three;
 
+    public void setFirstImageScal(float scal_compare_to_view){
+        this.recent_one=scal_compare_to_view;
+        requestLayout();
+    }
+
     public MyGalleryView(Context context) {
         super(context);
         initView();
@@ -71,7 +76,8 @@ public class MyGalleryView extends ViewGroup {
     }
 
     public float getFinalFirstLeft(int width) {
-        return (width - final_size_one) / 2.0f;
+//        return (width - final_size_one) / 2.0f;
+        return height*(1-recent_one)/2.0f;
     }
 
     public float getFinalFirstRight(int width) {
@@ -232,6 +238,8 @@ public class MyGalleryView extends ViewGroup {
     }
 
     public void setProcess(int process) {
+        if(process<0){process=0;}
+        if(process>100){process=100;}
         this.process = process;
        requestLayout();
     }
