@@ -31,6 +31,7 @@ public class MyGalleryView extends ViewGroup {
     public void setFirstImageScal(float scal_compare_to_view){
         this.recent_one=scal_compare_to_view;
         requestLayout();
+
     }
 
     public MyGalleryView(Context context) {
@@ -76,7 +77,6 @@ public class MyGalleryView extends ViewGroup {
     }
 
     public float getFinalFirstLeft(int width) {
-//        return (width - final_size_one) / 2.0f;
         return height*(1-recent_one)/2.0f;
     }
 
@@ -254,6 +254,12 @@ public class MyGalleryView extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
+        if(getLayoutParams().height==0){
+            throw new IllegalArgumentException("You should extrall set the layout_height value");
+        }else{
+            height=getLayoutParams().height;
+            width=(int)(2*height*(1-recent_one)/2.0f+height*recent_one+part_padding+part_padding);
+            setMeasuredDimension(width,height);
+        }
     }
 }

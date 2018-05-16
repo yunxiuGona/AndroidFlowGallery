@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar=(SeekBar)findViewById(R.id.seekBar);
         tv_process=(TextView)findViewById(R.id.tv_process);
         gallery=(MyGalleryView) findViewById(R.id.gallery);
-        gallery.setFirstImageScal(0.5f);
+        gallery.setFirstImageScal(0.9f);
         seekBar.setMax(100);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
