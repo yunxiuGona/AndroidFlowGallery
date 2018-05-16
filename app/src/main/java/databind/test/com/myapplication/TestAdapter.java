@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
-import databind.test.com.myapplication.view.MyGalleryView;
+import databind.test.com.myapplication.view.FlowGalleryView;
 
 /**
  * Created by wangyunxiu on 2018/5/16.
@@ -99,7 +99,7 @@ public class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                 View view = vholder.findViewById(R.id.gallery);
                 if(view!=null) {
                     int progress=(int) (((float) (dim_area_bottom - location[1]) / (float) (dim_area_bottom - dim_area_top)) * 100.0f);
-                    ((MyGalleryView)view).setProcess(progress);
+                    ((FlowGalleryView)view).setProcess(progress);
                 }
             }
         }
@@ -112,11 +112,11 @@ public class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         }
     }
     public class ViewHolderGallery extends RecyclerView.ViewHolder{
-        public MyGalleryView gallery;
+        public FlowGalleryView gallery;
         public TextView tv_text;
         public ViewHolderGallery(View itemView) {
             super(itemView);
-            gallery=(MyGalleryView)itemView.findViewById(R.id.gallery);
+            gallery=(FlowGalleryView)itemView.findViewById(R.id.gallery);
             tv_text=(TextView)itemView.findViewById(R.id.tv_text);
         }
     }
