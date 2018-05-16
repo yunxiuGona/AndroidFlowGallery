@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import databind.test.com.myapplication.view.MyGalleryView;
+
+import databind.test.com.myapplication.view.FlowGalleryView;
 
 public class MainActivity extends AppCompatActivity {
 
     private SeekBar seekBar;
     private TextView tv_process;
-    private MyGalleryView gallery;
+    private FlowGalleryView gallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         seekBar=(SeekBar)findViewById(R.id.seekBar);
         tv_process=(TextView)findViewById(R.id.tv_process);
-        gallery=(MyGalleryView) findViewById(R.id.gallery);
+        gallery=(FlowGalleryView) findViewById(R.id.gallery);
         gallery.setFirstImageScal(0.9f);
         seekBar.setMax(100);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
