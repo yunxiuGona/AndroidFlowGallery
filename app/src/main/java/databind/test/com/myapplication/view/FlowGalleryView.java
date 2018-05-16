@@ -11,7 +11,7 @@ import databind.test.com.myapplication.R;
  * Created by wangyunxiu on 2018/5/15.
  */
 
-public class MyGalleryView extends ViewGroup {
+public class FlowGalleryView extends ViewGroup {
 
     private int width = 0;
     private int height = 0;
@@ -34,22 +34,22 @@ public class MyGalleryView extends ViewGroup {
 
     }
 
-    public MyGalleryView(Context context) {
+    public FlowGalleryView(Context context) {
         super(context);
         initView();
     }
 
-    public MyGalleryView(Context context, AttributeSet attrs) {
+    public FlowGalleryView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public MyGalleryView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FlowGalleryView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView();
     }
 
-    public MyGalleryView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public FlowGalleryView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initView();
     }
@@ -63,9 +63,9 @@ public class MyGalleryView extends ViewGroup {
         iv_two.setScaleType(ImageView.ScaleType.CENTER_CROP);
         iv_three.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
-        MyGalleryView.this.addView(iv_three);
-        MyGalleryView.this.addView(iv_two);
-        MyGalleryView.this.addView(iv_one);
+        FlowGalleryView.this.addView(iv_three);
+        FlowGalleryView.this.addView(iv_two);
+        FlowGalleryView.this.addView(iv_one);
 
         iv_one.setImageResource(R.drawable.a);
         iv_two.setImageResource(R.drawable.b);

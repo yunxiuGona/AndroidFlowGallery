@@ -5,10 +5,10 @@
     android:background="#EEEEEE"
     android:padding="10dp">
 
-    <databind.test.com.myapplication.view.MyGalleryView
+    <databind.test.com.myapplication.view.FlowGalleryView
         android:id="@+id/gallery"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"></databind.test.com.myapplication.view.MyGalleryView>
+        android:layout_height="100dp"></databind.test.com.myapplication.view.FlowGalleryView>
 
 
     <TextView
